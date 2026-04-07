@@ -76,3 +76,22 @@ También se busca dejar alineados los cambios funcionales con sus evidencias par
 - Se dejó evidencia documental por cada historia en la carpeta `doc` de la rama `Develop`.
 - Se fortaleció la validación QA de los flujos intervenidos para asegurar consistencia visual y funcional.
 - Se mantuvo coherencia entre implementación, validación y documentación de resultados para el frente de interfaz.
+
+---
+
+## ¿Qué no se logró?
+
+- No se cerró al 100% la validación integral de extremo a extremo entre todos los cambios de backend y los escenarios QA de frontend.
+- Quedaron ajustes menores pendientes de depuración cruzada entre algunas ramas de soporte y la rama `develop`.
+- En ciertos entregables todavía falta robustecer evidencias complementarias de pruebas no funcionales (rendimiento y comportamiento en escenarios límite).
+- Se requiere ampliar la cobertura de pruebas de regresión para garantizar que los cambios recientes no impacten funcionalidades históricas.
+
+## ¿Qué se va a hacer?
+
+- Ejecutar una ronda final de validaciones integradas backend-frontend para confirmar estabilidad del cierre de Week 10.
+- Completar la homologación de documentación pendiente en `docs/` y `doc/` con enfoque en trazabilidad por HU.
+- Fortalecer pruebas de regresión sobre las historias implementadas:
+  - Backend: **HU-011** a **HU-016** y **HU-AC02**.
+  - Frontend: **HU-QA-FE-08** a **HU-QA-FE-12**.
+- Consolidar en `develop` los ajustes restantes de ramas de apoyo para minimizar deuda técnica de integración.
+- Preparar la base técnica para la siguiente iteración, asegurando continuidad entre implementación, QA y documentación.
