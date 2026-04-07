@@ -50,3 +50,29 @@ En paralelo, desde frontend se consolidaron las historias QA de esta semana, esp
 🔗 [Ver issues frontend](https://github.com/Temenico/FarmaExpres-Frontend/issues)
 
 🔗 [Ver documentación frontend (`Develop/doc`)](https://github.com/Temenico/FarmaExpres-Frontend/tree/Develop/doc)
+
+---
+
+## Objetivo
+
+Consolidar la entrega de Week 10 cerrando las historias de usuario priorizadas en backend y frontend, manteniendo trazabilidad en documentación técnica y QA dentro de las ramas activas de desarrollo.
+
+También se busca dejar alineados los cambios funcionales con sus evidencias para facilitar revisión de equipo, continuidad de implementación y control de calidad en las siguientes iteraciones.
+
+---
+
+## ¿Qué se hizo?
+
+- Se completó la implementación del bloque backend comprendido entre **HU-011** y **HU-016**.
+- Se incorporaron y registraron los ajustes de **HU-AC02** dentro del flujo de trabajo de backend.
+- Se integraron los cambios provenientes de las ramas:
+  - **Cambios_Rama_HU-ACFE-01-dev**
+  - **Cambios_Rama_HU-ACFE-02-dev**
+  - **Cambios_Rama_HU-ACFE-03-dev**
+- Se actualizó la documentación de soporte en la carpeta `docs/` de la rama `develop` en el repositorio backend.
+- Se organizó la trazabilidad de entregables técnicos para revisión por historias de usuario y cambios de rama.
+
+- En frontend se ejecutaron las historias **HU-QA-FE-08** a **HU-QA-FE-12** durante la Week 10.
+- Se dejó evidencia documental por cada historia en la carpeta `doc` de la rama `Develop`.
+- Se fortaleció la validación QA de los flujos intervenidos para asegurar consistencia visual y funcional.
+- Se mantuvo coherencia entre implementación, validación y documentación de resultados para el frente de interfaz.
