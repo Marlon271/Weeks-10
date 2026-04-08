@@ -211,6 +211,43 @@
       font-size: 0.92rem;
       line-height: 1.55;
     }
+    .hu017-wrap {
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 1rem;
+    }
+    .hu017-box {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--surface);
+      padding: 0.95rem;
+    }
+    .hu017-box h3 {
+      margin: 0;
+      font-size: 1.02rem;
+    }
+    .hu017-box p {
+      margin: 0.55rem 0 0;
+      color: var(--soft);
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+    .proof-list {
+      margin: 0.65rem 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 0.5rem;
+    }
+    .proof-list li a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px dotted rgba(17,38,63,0.45);
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+    .proof-list li a:hover { border-bottom-style: solid; }
     .list-wrap {
       margin-top: 1rem;
       display: grid;
@@ -333,7 +370,7 @@
       to { opacity: 1; transform: translateY(0); }
     }
     @media (max-width: 980px) {
-      .hero__inner, .split, .problem-grid, .qa-grid, .list-wrap { grid-template-columns: 1fr; }
+      .hero__inner, .split, .problem-grid, .qa-grid, .hu017-wrap, .list-wrap { grid-template-columns: 1fr; }
       .stats {
         border-left: none;
         border-top: 1px solid var(--line);
@@ -352,6 +389,7 @@
         <a href="#overview">Panorama</a>
         <a href="#problem">Problematica</a>
         <a href="#qa-summary">Resumen QA</a>
+        <a href="#hu017">HU-017</a>
         <a href="#backend">Backend</a>
         <a href="#frontend">Frontend</a>
         <a href="#repos">Repos</a>
@@ -489,6 +527,39 @@
       </div>
     </section>
 
+    <section id="hu017" class="reveal">
+      <h2>Actualizacion clave Week 10: HU-017 (Base de datos versionada)</h2>
+      <p class="copy">
+        En terminos simples, esta HU pone orden en la base de datos para que el sistema no dependa de scripts sueltos.
+        Eso significa menos errores al desplegar, mas control del historial de cambios y una plataforma mas confiable para crecer.
+      </p>
+      <div class="hu017-wrap">
+        <article class="hu017-box">
+          <h3>Que problema resuelve y por que vende mejor el producto</h3>
+          <p>
+            Sin versionado, cada entorno puede quedar distinto y aparecen fallas dificiles de rastrear.
+            Con HU-017, la base se gestiona como software: cada cambio queda registrado, se puede replicar y tambien revertir.
+          </p>
+          <p>
+            Para negocio esto se traduce en menos caidas por configuracion, menos tiempo perdido en soporte
+            y mayor confianza para agregar nuevos modulos sin romper lo que ya funciona.
+          </p>
+        </article>
+        <article class="hu017-box">
+          <h3>Pruebas y evidencia de HU-017</h3>
+          <ul class="proof-list">
+            <li><a href="https://github.com/jose6668/FarmaExpres_Backend/blob/HU-017-dev/docs/Changes/HU-017-diseno-y-versionado-base-de-datos-farmaexpres.md" target="_blank" rel="noopener noreferrer">Documento HU-017 (objetivo, problema, alcance e implementacion)</a></li>
+            <li><a href="https://github.com/jose6668/FarmaExpres_Backend/blob/HU-017-dev/database/bootstrap.sql" target="_blank" rel="noopener noreferrer">Evidencia bootstrap.sql: bases separadas para users e inventory</a></li>
+            <li><a href="https://github.com/jose6668/FarmaExpres_Backend/blob/HU-017-dev/database/auth/changelog-master.yaml" target="_blank" rel="noopener noreferrer">Evidencia Liquibase auth: changelog maestro versionado</a></li>
+            <li><a href="https://github.com/jose6668/FarmaExpres_Backend/blob/HU-017-dev/database/inventory/changelog-master.yaml" target="_blank" rel="noopener noreferrer">Evidencia Liquibase inventory: changelog maestro versionado</a></li>
+            <li><a href="https://github.com/jose6668/FarmaExpres_Backend/blob/HU-017-dev/database/auth/03_dcl/00_roles/001_create_access_roles.sql" target="_blank" rel="noopener noreferrer">Evidencia DCL auth: roles tecnicos de acceso</a></li>
+            <li><a href="https://github.com/jose6668/FarmaExpres_Backend/blob/HU-017-dev/database/inventory/03_dcl/00_roles/001_create_access_roles.sql" target="_blank" rel="noopener noreferrer">Evidencia DCL inventory: separacion lectura/escritura</a></li>
+            <li><a href="https://github.com/jose6668/FarmaExpres_Backend/blob/HU-017-dev/docker-compose.yml" target="_blank" rel="noopener noreferrer">Evidencia docker-compose: integracion de Liquibase en despliegue</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
     <section id="frontend" class="reveal">
       <h2>Evidencia visual frontend por HU</h2>
       <p class="copy">
@@ -513,7 +584,7 @@
         <a href="https://github.com/Temenico/FarmaExpres-Frontend/tree/Develop" target="_blank" rel="noopener noreferrer">Frontend rama Develop</a>
         <a href="https://github.com/Temenico/FarmaExpres-Frontend/tree/QA" target="_blank" rel="noopener noreferrer">Frontend rama QA</a>
       </div>
-      <p class="note">Corte de compilacion: 6 de abril de 2026.</p>
+      <p class="note">Corte de compilacion: 8 de abril de 2026.</p>
     </section>
   </main>
 
@@ -533,6 +604,7 @@
       ["HU-014 - User activity report by role", "https://github.com/jose6668/FarmaExpres_Backend/blob/Develop/docs/Changes/HU-014-user-activity-report-by-role.md"],
       ["HU-015 - Inventory entry by batch (farmaceutico)", "https://github.com/jose6668/FarmaExpres_Backend/blob/Develop/docs/Changes/HU-015-register-inventory-entry-by-batch-for-pharmacist.md"],
       ["HU-016 - Inventory exit by batch (farmaceutico)", "https://github.com/jose6668/FarmaExpres_Backend/blob/Develop/docs/Changes/HU-016-register-inventory-exit-by-batch-for-pharmacist.md"],
+      ["HU-017 - Diseno y versionado de base de datos", "https://github.com/jose6668/FarmaExpres_Backend/blob/HU-017-dev/docs/Changes/HU-017-diseno-y-versionado-base-de-datos-farmaexpres.md"],
       ["HU-AC02 - API gateway centralized", "https://github.com/jose6668/FarmaExpres_Backend/blob/Develop/docs/Changes/HU-AC02-api-gateway-centralized.md"],
       ["Cambios_Rama_HU-ACFE-01-dev", "https://github.com/jose6668/FarmaExpres_Backend/blob/Develop/docs/Changes/Cambios_Rama_HU-ACFE-01-dev.md"],
       ["Cambios_Rama_HU-ACFE-02-dev", "https://github.com/jose6668/FarmaExpres_Backend/blob/Develop/docs/Changes/Cambios_Rama_HU-ACFE-02-dev.md"],
