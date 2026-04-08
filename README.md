@@ -29,7 +29,7 @@ En paralelo, desde frontend se consolidaron las historias QA de esta semana, esp
 - **HU-012** - Implementada y registrada en `docs/` sobre rama `develop`.
 - **HU-013** - Implementada y registrada en `docs/` sobre rama `develop`.
 - **HU-014** - Implementada y registrada en `docs/` sobre rama `develop`.
-- **HU-015** - Implementada y registrada en `docs/` sobre rama `develop`.
+- **HU-015** - Implementada y registrada in `docs/` sobre rama `develop`.
 - **HU-016** - Implementada y registrada en `docs/` sobre rama `develop`.
 - **HU-AC02** - Ajustes y validaciones incorporadas en backend.
 - **Cambios_Rama_HU-ACFE-01-dev** - Integracion de cambios en flujo backend.
@@ -89,3 +89,21 @@ Tambien se busca dejar alineados los cambios funcionales con sus evidencias para
 - Fortalecer pruebas de regresion sobre las historias implementadas en backend (**HU-011** a **HU-016** y **HU-AC02**) y frontend (**HU-QA-FE-08** a **HU-QA-FE-12**).
 - Consolidar en `develop` los ajustes restantes de ramas de apoyo para minimizar deuda tecnica de integracion.
 - Preparar la base tecnica para la siguiente iteracion, asegurando continuidad entre implementacion, QA y documentacion.
+
+---
+
+## HU-017 - Diseño y versionado de la base de datos
+
+**¿Qué resuelve?**
+La HU-017 implementa una base de datos versionada, eliminando la dependencia de scripts manuales y permitiendo que cada cambio quede registrado, sea replicable y reversible. Esto reduce errores, facilita la reconstrucción de ambientes y asegura que todos los integrantes trabajen sobre la misma base.
+
+**¿Por qué es clave para el producto?**
+- Permite crecer de forma ordenada y auditable.
+- Mejora la seguridad separando roles técnicos y de negocio.
+- Facilita el despliegue automatizado y la colaboración entre equipos.
+- Reduce el riesgo de inconsistencias y caídas por configuraciones erróneas.
+
+**Evidencia y documentación:**
+- [Documento HU-017 (objetivo, problema, alcance e implementación)](https://github.com/jose6668/FarmaExpres_Backend/blob/HU-017-dev/docs/Changes/HU-017-diseno-y-versionado-base-de-datos-farmaexpres.md)
+- [Evidencia bootstrap.sql](https://github.com/jose6668/FarmaExpres_Backend/blob/HU-017-dev/database/bootstrap.sql)
+- [Changelogs y roles técnicos](https://github.com/jose6668/FarmaExpres_Backend/tree/HU-017-dev/database/)
